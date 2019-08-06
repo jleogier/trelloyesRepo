@@ -8,14 +8,14 @@ import renderer from 'react-test-renderer';
 it('renders Card without crashing', () => {
   const card = document.createElement('div');
   ReactDOM.render(<App />, card);
-  ReactDOM.unmountComponentAtNode(card);
+//   ReactDOM.unmountComponentAtNode(card);
 });
 
 // Snapshot
 
-// it('renders the UI as expected', () => {
-//     const tree = renderer
-//       .create(<div name="Card"/>)
-//       .toJSON();
-//     expect(tree).toMatchSnapshot();  
-//     });
+it('renders the UI as expected', () => {
+    const tree = renderer
+      .create(<div name="Card"/>)
+      .toJSON();
+    expect(tree).toMatchSnapshot();  
+    });
